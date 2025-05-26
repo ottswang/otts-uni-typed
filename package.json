@@ -1,0 +1,58 @@
+{
+  "name": "monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "keywords": [
+    "uni-app",
+    "uniapp",
+    "uv-ui",
+    "types",
+    "type"
+  ],
+  "homepage": "https://github.com/uni-helper/uni-typed#readme",
+  "bugs": {
+    "url": "https://github.com/uni-helper/uni-typed/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ottswang/otts-uni-typed"
+  },
+  "funding": "https://github.com/ModyQyW/sponsors",
+  "license": "MIT",
+  "author": {
+    "name": "OttsWang",
+    "email": "wurui.dev@gmail.com",
+    "url": "https://modyqyw.top"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "build": "rimraf packages/*/dist --glob && pnpm -r --filter=./packages/* run build && pnpm -r run build-post",
+    "check": "biome check --write --no-errors-on-unmatched --files-ignore-unknown=true",
+    "dev": "pnpm stub",
+    "docs:build": "pnpm -C docs run build",
+    "docs:dev": "pnpm -C docs run dev",
+    "docs:preview": "pnpm -C docs run preview",
+    "release": "lerna version",
+    "stub": "pnpm -r --filter=./packages/* --parallel run stub",
+    "test": "vitest run --typecheck",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.3",
+    "@dcloudio/types": "^3.4.12",
+    "@lerna-lite/cli": "^3.10.0",
+    "@lerna-lite/version": "^3.10.0",
+    "@types/node": "^20.16.12",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
+    "lint-staged": "^15.2.10",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.3",
+    "unbuild": "^3.0.0-rc.11",
+    "vitest": "^2.1.3"
+  },
+  "packageManager": "pnpm@9.12.2",
+  "engines": {
+    "node": ">=14.18"
+  }
+}
