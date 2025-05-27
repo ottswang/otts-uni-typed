@@ -7,9 +7,7 @@
     "target": "ESNext",
     "resolveJsonModule": true,
     "paths": {
-      "@otts/uv-ui-types": [
-        "./packages/uv-ui-types/src/index.ts"
-      ],
+      "@otts/uv-ui-types": ["./packages/uv-ui-types/src/index.ts"]
     },
     "strict": true,
     "esModuleInterop": true,

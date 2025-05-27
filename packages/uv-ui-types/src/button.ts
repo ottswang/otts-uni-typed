@@ -1,4 +1,4 @@
-import { BaseComponent, ColorType, Lang } from "./_common";
+import type { BaseComponent, ColorType, Lang } from "./_common";
 import "vue";
 
 type ButtonSize = "normal" | "large" | "mini";
@@ -265,26 +265,27 @@ interface ButtonSlots {
   ["suffix"]?: () => any;
 }
 
- interface _Button extends BaseComponent<ButtonProps & ButtonEvents, ButtonSlots> {}
+interface _Button
+  extends BaseComponent<ButtonProps & ButtonEvents, ButtonSlots> {}
 
- export type {
-    ButtonOpenType as UvButtonOpenType,
-    ButtonProps as UvButtonProps,
-    ButtonEvents as UvButtonEvents,
-    _Button as UvButton,
-  }
+export type {
+  ButtonOpenType as UvButtonOpenType,
+  ButtonProps as UvButtonProps,
+  ButtonEvents as UvButtonEvents,
+  _Button as UvButton,
+};
 
-  declare global {
-    namespace UniHelper {
-      export type UvButtonOpenType = ButtonOpenType;
-      export type UvButtonProps = ButtonProps;
-      export type UvButtonEvents = ButtonEvents;
-      export type UvButton = _Button
-    }
+declare global {
+  namespace UniHelper {
+    export type UvButtonOpenType = ButtonOpenType;
+    export type UvButtonProps = ButtonProps;
+    export type UvButtonEvents = ButtonEvents;
+    export type UvButton = _Button;
   }
+}
 
 declare module "vue" {
   export interface GlobalComponents {
-    UvButton: _Button
+    UvButton: _Button;
   }
 }
