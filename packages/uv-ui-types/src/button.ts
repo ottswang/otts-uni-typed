@@ -1,5 +1,4 @@
 import type { BaseComponent, ColorType, Lang } from "./_common";
-import "vue";
 
 type ButtonSize = "normal" | "large" | "mini";
 type ButtonShape = "square" | "circle";

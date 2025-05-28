@@ -1,5 +1,5 @@
-import { BaseComponent, Lang } from "./_common";
-import { UvButtonOpenType } from "./button";
+import type { BaseComponent, Lang } from "./_common";
+import type { UvButtonOpenType } from "./button";
 
 interface Action {
   /**
@@ -148,7 +148,7 @@ interface ActionSheetEvents {
   ["onOpensetting"]?: (...args: any[]) => any;
 }
 
-interface ActionSheet
+interface _ActionSheet
   extends BaseComponent<ActionSheetProps & ActionSheetEvents> {}
 
 interface ActionSheetInstance {
@@ -163,8 +163,25 @@ interface ActionSheetInstance {
 }
 
 export type {
+  Action as UvActionSheetActionItem,
   ActionSheetProps as UvActionSheetProps,
   ActionSheetEvents as UvActionSheetEvents,
+  _ActionSheet as UvActionSheet,
   ActionSheetInstance as UvActionSheetInstance,
-  ActionSheet as UvActionSheet,
+};
+
+declare global {
+  namespace UniHelper {
+    export type UvActionSheetActionItem = Action;
+    export type UvActionSheetProps = ActionSheetProps;
+    export type UvActionSheetEvents = ActionSheetEvents;
+    export type UvActionSheet = _ActionSheet;
+    export type UvActionSheetInstance = ActionSheetInstance;
+  }
+}
+
+declare module "vue" {
+  export interface GlobalComponents {
+    UvActionSheet: _ActionSheet;
+  }
 }
