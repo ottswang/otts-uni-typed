@@ -1,6 +1,6 @@
 {
   "name": "@otts/uv-ui-types",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "为 uv-ui 组件提供 TypeScript 类型",
   "keywords": [
     "uni-app",
@@ -10,21 +10,16 @@
     "types",
     "type"
   ],
-  "homepage": "https://github.com/uni-helper/uni-typed/tree/main/packages/uni-ui-types",
-  "bugs": {
-    "url": "https://github.com/uni-helper/uni-typed/issues"
-  },
+  "homepage": "https://github.com/ottswang/otts-uni-typed/tree/master/packages/uv-ui-types",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ottswang/otts-uni-typed",
-    "directory": "packages/uni-ui-types"
+    "url": "git+https://github.com/ottswang/otts-uni-typed.git",
+    "directory": "packages/uv-ui-types"
   },
-  "funding": "https://github.com/ModyQyW/sponsors",
   "license": "MIT",
   "author": {
-    "name": "ModyQyW",
-    "email": "wurui.dev@gmail.com",
-    "url": "https://modyqyw.top"
+    "name": "Otts",
+    "email": "ottswang@126.com"
   },
   "sideEffects": false,
   "type": "module",
@@ -63,7 +58,7 @@
     "typescript": "^5.0.0",
     "vue": "^3.0.0"
   },
-  "packageManager": "pnpm@9.12.2",
+  "packageManager": "pnpm@9.5.0",
   "engines": {
     "node": ">=14.18"
   },
