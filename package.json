@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uni-helper/uni-typed.git"
+    "url": "git+https://github.com/ottswang/otts-uni-typed"
   },
   "funding": "https://github.com/ModyQyW/sponsors",
   "license": "MIT",

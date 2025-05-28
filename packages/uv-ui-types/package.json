@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uni-helper/uni-typed.git",
+    "url": "git+https://github.com/ottswang/otts-uni-typed",
     "directory": "packages/uni-ui-types"
   },
   "funding": "https://github.com/ModyQyW/sponsors",
