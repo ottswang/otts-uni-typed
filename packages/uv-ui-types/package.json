@@ -1,6 +1,6 @@
 {
   "name": "@otts/uv-ui-types",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "为 uv-ui 组件提供 TypeScript 类型",
   "keywords": [
     "uni-app",
