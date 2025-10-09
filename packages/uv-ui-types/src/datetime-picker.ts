@@ -1,4 +1,4 @@
-import type { BaseComponent } from "./_common";
+import { DefineComponent } from "vue";
 
 type DatetimePickerMode = "datetime" | "date" | "time" | "year-month" | "year";
 
@@ -144,8 +144,7 @@ interface DatetimePickerEvents {
   ["onClose"]?: () => any;
 }
 
-interface _DatetimePicker
-  extends BaseComponent<DatetimePickerProps & DatetimePickerEvents> {}
+type _DatetimePicker = DefineComponent<DatetimePickerProps & DatetimePickerEvents>;
 
 interface DatetimePickerInstance {
   /**
