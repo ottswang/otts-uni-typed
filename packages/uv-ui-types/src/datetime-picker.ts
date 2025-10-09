@@ -1,4 +1,4 @@
-import { DefineComponent } from "vue";
+import type { BaseComponent } from "./_common";
 
 type DatetimePickerMode = "datetime" | "date" | "time" | "year-month" | "year";
 
@@ -7,7 +7,7 @@ interface DatetimePickerProps {
    * 绑定值
    * @default ""
    */
-  value: string | number;
+  modelValue: string | number;
   /**
    * 是否显示顶部的操作栏
    * @default true
@@ -144,7 +144,8 @@ interface DatetimePickerEvents {
   ["onClose"]?: () => any;
 }
 
-type _DatetimePicker = DefineComponent<DatetimePickerProps & DatetimePickerEvents>;
+interface _DatetimePicker
+  extends BaseComponent<DatetimePickerProps & DatetimePickerEvents> {}
 
 interface DatetimePickerInstance {
   /**
