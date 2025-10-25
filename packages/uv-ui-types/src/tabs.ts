@@ -1,5 +1,8 @@
 import type { BaseComponent } from "./_common";
-
+interface TabsOnChangeFuncE {
+  index: number;
+  [key: string]:any;
+}
 interface TabsProps {
   /**
    * 滑块移动一次所需的时间，单位ms
@@ -77,10 +80,9 @@ interface TabsEvents {
   ["onClick"]?: (index: number, item: any) => any;
   /**
    * 标签索引改变时触发(disalbed时不会触发)
-   * @param {number} index 标签索引值
-   * @param {any} item 传入的其他值
+   * @param {TabsOnChangeFuncE} e 标签索引值
    */
-  ["onChange"]?: (index: number, item: any) => any;
+  ["onChange"]?: (e?:TabsOnChangeFuncE) => any;
 }
 
 interface _Tabs extends BaseComponent<TabsProps & TabsEvents> {}
