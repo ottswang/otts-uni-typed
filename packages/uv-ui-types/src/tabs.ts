@@ -1,6 +1,6 @@
 import type { BaseComponent } from "./_common";
 interface TabsOnChangeFuncE {
-  index: number;
+  index?: number;
   [key: string]:any;
 }
 interface TabsProps {
